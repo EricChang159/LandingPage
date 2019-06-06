@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Pacifico&display=swap" rel="stylesheet">
+            
+            
+        
+
+            <script>
+                    // show the navbar first-page
+                    $(document).ready(function(){
+                        $("#show-navbar").click(function(){
+                            $("#navbar").toggle(200)
+                        })
+                    })
+                
+            </script>
+        <style>
+            
+            
+            body{
+                width:205vh;
+            }
+
+            .logo{
+               /* margin:50px 0 0 0; */
+               font-family:'Pacifico', cursive;
+               font-size: 50px;
+               text-align:cente;
+               line-height:30px;
+               color:rgb(236, 215, 27);
+               
+               
+           }
+
+            #first-page{
+                position:relative;
+                width:205vh;
+                height:100vh;
+            }
+            
+            #second-page{
+                width:205vh;
+                position:relative;
+                margin:50px 0 0 0;
+            }
+            
+            /*相框製作*/
+           .photo-icon{
+               position:absolute;
+               top:10px;
+               width:168.6vh;
+               height:95vh;
+               border:solid rgb(250, 243, 243);
+               border-width: 40px 40px;
+               
+               box-shadow:rgb(129, 124, 124) 5px 5px 5px 10px;
+               /* background:url("https://is.gd/4weCpQ") no-repeat; */
+               background-position-y:-200px;
+               overflow:hidden;
+               display:non;
+               
+               
+           }
+           .photo-icon >a >img{
+               display:block;
+               width:170vh;
+               height:95vh;
+               position:absolute;
+               top:0%;left:0%;
+               filter:contrast(150%);
+               
+           }
+           .photo-icon>a{
+            opacity:0;
+
+           }
+
+           /*start animation*/
+            .photo-icon >a {
+            
+               animation: photo-light 50s infinite linear;
+           }
+
+           @keyframes  photo-light {
+               0%{
+                   opacity:0;
+               }
+               4%{
+                   opacity:1;
+               }
+               8%{
+                   opacity:1;
+               }
+               10%{
+                   opacity:0;
+               }
+
+           }
+
+           .photo-icon:nth-child(10){
+                animation-delay: 0s              
+            }
+            .photo-icon :nth-child(9){
+               animation-delay: 5s
+            }
+            .photo-icon :nth-child(8){
+               animation-delay: 10s
+            }
+            .photo-icon :nth-child(7){
+               animation-delay: 15s
+            }
+            .photo-icon :nth-child(6){
+                animation-delay: 20s               
+            }
+            .photo-icon :nth-child(5){
+                animation-delay: 25s               
+            }
+            .photo-icon :nth-child(4){
+                animation-delay: 30s               
+            }
+            .photo-icon :nth-child(3){
+                animation-delay: 35s               
+            }
+            .photo-icon :nth-child(2){
+                animation-delay: 40s               
+            }
+            .photo-icon :nth-child(1){
+                animation-delay: 45s               
+            }
+            /*navbar menu*/
+            /* show-navbar haven't RWD when it's mobil size*/
+            #show-navbar{ 
+              font-size:25px;
+              position:fixed;
+              top:120px;left:60px;
+              z-index:10;
+          }
+            
+           #navbar{
+            font-size:20px;
+               
+               
+            
+            
+           }
+           /*learn-more*/
+           #learn-more{
+                position:absolute;
+                top:80%;left:42%;
+                text-align:center;
+                background:black;
+                width:30vh;
+                height:10%;
+                z-index:10;
+                opacity:0.7;
+                line-height:55px;
+                font-size:30px;
+                border-radius:20px;
+           }
+           #learn-more > a{
+                text-decoration:none;
+                color:white;
+                display:block;
+           }
+           #learn-more:hover {
+               background:rgb(203, 216, 213);
+               opacity:1;
+               
+           }
+           #learn-more:hover > a {
+                color:black;
+           }
+           /*第二頁*/
+           
+           #second-page {
+            margin:170px 10px 0 0px;
+            height:100vh;
+           }
+           #second-page  #head{
+               margin:60px 0 0 0;
+               height:170px;
+               font-family:'Pacifico', cursive;
+               font-size: 50px;
+               text-align:cente;
+               line-height:30px;
+               color:rgb(236, 215, 27);
+               padding:60px 0 0 500px;
+               
+               border-bottom: 10px solid;
+               border-radius: 10px;
+           }
+
+           #second-page #content{
+               margin:20px 0 0 0;
+               font-family: 'Gloria Hallelujah', cursive;
+               text-align:center;
+               font-size:30px
+           }
+           #second-page #bottom{
+               position:relative;
+               margin:0px 0 0 0;
+               bottom:0;
+                height:100px;
+                padding-left:30px
+           }
+           #second-page #bottom .container-for-item img{
+               position:relative;
+               width:200px;
+               height:200px;
+               border-radius:50%;
+               float:left;
+               margin: 30px 0 0 -40px;
+               transition:0.5s;
+           } 
+
+
+           #second-page #bottom .container-for-item img:hover{
+            transform:scale(1.5);
+            z-index: 5 !important;
+            
+           }
+           .deal-content{
+            font-family:'Gloria Hallelujah', cursive;
+            font-size: 30px;
+            position: relative;
+            left:120px;top:40px;
+            transform:rotate(10deg)
+            
+           }
+           .deal-content{
+           
+            animation: deal  1.5s linear infinite;
+
+           }
+           @keyframes deal{
+
+               12.5%{
+                transform:rotate(30deg)
+               }
+
+               25%{
+                transform:rotate(10deg)
+               }
+               50%{
+
+               }
+               
+           }
+           .deal-content{
+               animation-delay: 1.5s
+           }
+           
+           #text{
+               height:300px;
+               width:200px;
+               border:2px solid blue;
+
+           }
+
+           
+        </style>
+       
+        <body>
+                
+            <div id="first-page">
+                
+                
+
+            <div class="container">
+                <div id="learn-more"><a href="#second-page">Learn More</a></div>
+                <nav id="navbar" class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+                        
+
+                    <a  style="color:rgb(236, 215, 27);padding:0 0 0 80px;" href="#" class="navbar-brand logo">World<br>traveler</a>
+
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-list">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                     <div class="collapse navbar-collapse" id="navbar-list">
+
+                        <ul class="navbar-nav ml-auto mr-5" >
+                            <li class="nav-item"><a href="#" class="nav-link">Travel</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Amazing Plan</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">where</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#sign-up">Sign Up</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#sign-in">Sign In</a></li>
+                        </ul>
+                        <form class="form-inline">
+                            <input class="form-control mx-2" type="text" placeholder="search">
+                            <button class="btn btn-light mx-2" type="submit">Search</button> 
+                        </form>
+            
+                    </div>
+    
+                </nav>
+
+                <button id="show-navbar" class="btn btn-dark" type="button">☰</button>
+
+                <div class="photo-icon">
+
+                    <a href="#"><img src="https://is.gd/4weCpQ"></a>
+                    <a href="#"><img src="https://is.gd/3SLybn"></a>
+                    <a href="#"><img src="https://is.gd/3o70cI"></a>
+                    <a href="#"><img src="https://is.gd/DUehvk"></a>
+                    <a href="#"><img src="https://is.gd/fAzJxH"></a>
+                    <a href="#"><img src="https://is.gd/8c5mZW"></a>
+                    <a href="#"><img src="https://is.gd/hf4UUM"></a>
+                    <a href="#"><img src="https://is.gd/EfjhRR"></a>
+                    <a href="#"><img src="https://is.gd/xxF9xO"></a>
+                    <a href="#"><img src="https://is.gd/DeGH7X"></a>
+
+                </div>
+                <!-- for sign in and sing up -->
+                
+               
+            
+
+            </div>
+            </div> 
+
+            <div id="second-page">
+            
+            <div class="container">
+                <div class="row">   
+
+                    <div id="head" class="col-sm-12 ">
+                        <div style="padding:0 0 0 9px"> World</div>
+                        <div>Traveler</div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div id="content" class="col-sm-12">
+                        <div>The world are Amazing </div>
+                        <div>And you're a part of the world.</div>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div id="bottom" class="col-md-12 ">
+                        <div class="item-list">
+
+                            <div class="container-for-item">                     
+                                <a href="#"><img style="z-index:5" src="https://is.gd/MoiSuU"></a>
+                            </div>
+                            <div class="container-for-item">
+                                <a href="#"><img style="z-index: 4" src="https://is.gd/T8DXO7"></a>                              
+                            </div>
+                            <div class="container-for-item">
+                                <a href="#"><img style="z-index: 3" src="https://is.gd/hG50Gy"></a>
+                            </div>
+                            <div class="container-for-item">
+                                <a href="#"><img style="z-index: 2" src="https://is.gd/hsMAQs"></a>
+                            </div>
+                            <div class="container-for-item">
+                                <a href="#"><img style="z-index: 1" src="https://tinyurl.com/y6yyb2g4"></a>
+                            </div>
+                        </div>
+
+                        <div class="deal-content" >
+                           <a href="#" style="display:block"> Get More <br> Great Deal !! </a>
+                        </div>
+
+                    </div>
+                           
+                            
+                </div>
+            </div>
+            </div>
+            
+
+            <div id="third-page">
+
+            </div>
+            <div class="modal fade" id="sign-in">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>Sign In</h1>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>                               
+                            </div>
+                            <div class="modal-body">
+                                <form class="was-validated" action="#">
+                                    <div class="form-group">
+                                        <lable for="Uname">Username</lable>
+                                        <input class="form-control" type="text" name="Uname" placeholder="Username" required>
+                                        <div class="valid-feedback">Valid</div>
+                                        <div class="invalid-feedback">Please Enter Again</div>                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <lable for="pwd">Password</lable>
+                                        <input class="form-control" type="password" name="pwd" placeholder="Password" required>
+                                        <div class="valid-feedback">Valid</div>
+                                        <div class="invalid-feedback">Please Enter Again</div>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <lable class="form-check-lable">
+                                            <input class="form-check-input" type="checkbox" name="agree on" required>I agree on all the item
+                                            <div class="valid-feedback">Valid</div>
+                                            <div class="invalid-feedback">Check this checkbox to continue</div>
+                                        </lable>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" type="submit">Sign In</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="sign-up">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>Sign Up</h1>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>                                   
+                            <div class="modal-body">
+                                <form class="was-validated">
+                                    
+                                        <div class="form-group">
+                                        <lable for="eml">Email
+                                        <div class="input-group">
+                                        <input class="form-control" type="text" name="eml" placeholder="email" required>
+                                        <div class="input-group-append">                     
+                                            <span class="input-group-text">@expample.com</span>
+                                        </div>
+                                        </lable>   
+                                                                 
+                                        <div class="valid-feedback">valid</div>
+                                        <div class="invalid-feedback">Wrong Style</div>                                      
+                                        </div>
+
+                                    <div class="form-group">
+                                        <lable for="pwd1"></lable>Password
+                                        <input class="form-control" type="password" placeholder="create password" name="pwd1" required>
+                                        <div class="valid-feedback">valid</div>
+                                        <div class="invalid-feedback">Wrong Password</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <lable for="???"></lable>Check Again
+                                        <input class="form-control" type="password" placeholder="check again the password" name="???" required>
+                                        <div class="valid-feedback">Match</div>
+                                        <div class="invalid-feedback">Different Password</div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </div>
+                                <div id="text">1</div>
+                        </div>
+                    </div>
+                </div>
+            
+
+
+
+
+
+
+        
+
+
+            
+        </body>
+        
+
+
+
+    </head>
+</html>
